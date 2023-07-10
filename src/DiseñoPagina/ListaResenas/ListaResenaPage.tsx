@@ -19,7 +19,7 @@ export const ListaResenaPage = () => {
 
     useEffect(() => {
         const buscarResenas = async () => {
-            const apiUrl: string = `http://localhost:8080/api/resenas/search/findByLibroId?libroId=${libroId}&page=${paginaActual - 1}&size=${resenasPorPagina}`;
+            const apiUrl: string = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/resenas/search/findByLibroId?libroId=${libroId}&page=${paginaActual - 1}&size=${resenasPorPagina}`;
 
             const responseResena = await fetch(apiUrl);
 

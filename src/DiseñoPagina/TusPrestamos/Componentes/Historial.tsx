@@ -21,7 +21,7 @@ export const Historial = () => {
     useEffect(() => {
         const fetchHistorial = async () => {
             if (authState && authState.isAuthenticated) {
-                const urlApi = `http://localhost:8080/api/historials/search/findLibrosByUsuarioEmail/?usuarioEmail=${authState.accessToken?.claims.sub}&page=${paginaActual - 1}&size=5`
+                const urlApi = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/historials/search/findLibrosByUsuarioEmail/?usuarioEmail=${authState.accessToken?.claims.sub}&page=${paginaActual - 1}&size=5`
 
                 const peticion = {
                     method: 'GET',

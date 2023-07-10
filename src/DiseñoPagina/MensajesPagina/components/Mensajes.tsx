@@ -22,7 +22,7 @@ export const Mensajes = () => {
     useEffect(() => {
         const fetchMensajes = async () => {
             if (authState && authState?.isAuthenticated) {
-                const apiUrl = `http://localhost:8080/api/mensajeses/search/findMensajesByUsuarioEmail/?usuarioEmail=${authState?.accessToken?.claims.sub}&page=${paginaActual - 1}&size=${mensajesPorPagina}`;
+                const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/mensajeses/search/findMensajesByUsuarioEmail/?usuarioEmail=${authState?.accessToken?.claims.sub}&page=${paginaActual - 1}&size=${mensajesPorPagina}`;
                 const peticion = {
                     method: 'GET',
                     headers: {

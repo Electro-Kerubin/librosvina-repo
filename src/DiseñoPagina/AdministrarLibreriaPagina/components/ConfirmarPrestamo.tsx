@@ -25,7 +25,7 @@ export const ConfirmarPrestamos: React.FC<{}> = () => {
 
             if (authState && authState.isAuthenticated) {
 
-                const apiUrl = `http://localhost:8080/api/admin/confidencial`;
+                const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial`;
 
                 let finalUrl: string = '';
 
@@ -65,7 +65,7 @@ export const ConfirmarPrestamos: React.FC<{}> = () => {
 
     async function confirmarPrestamo(idPrestamo: number) {
         if (authState && authState.isAuthenticated) {
-            const apiUrl = `http://localhost:8080/api/admin/confidencial/confirmar/prestamo?prestamoId=${idPrestamo}`;
+            const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial/confirmar/prestamo?prestamoId=${idPrestamo}`;
             const peticion = {
                 method: "PUT",
                 headers: {
@@ -86,7 +86,7 @@ export const ConfirmarPrestamos: React.FC<{}> = () => {
 
     async function cancelarPrestamo(idPrestamo: number) {
         if (authState && authState.isAuthenticated) {
-            const apiUrl = `http://localhost:8080/api/admin/confidencial/cancelar/prestamo?prestamoId=${idPrestamo}`;
+            const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial/cancelar/prestamo?prestamoId=${idPrestamo}`;
             const peticion = {
                 method: "PUT",
                 headers: {

@@ -20,7 +20,7 @@ export const ActualizarOpciones: React.FC<{ libro: LibroModelo, borrarLibro: any
     }, []);
 
     async function borrarLibro() {
-        const apiUrl = `http://localhost:8080/api/admin/confidencial/eliminar/libro/?libroId=${props.libro?.id}`;
+        const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial/eliminar/libro/?libroId=${props.libro?.id}`;
         const peticion = {
             method: 'DELETE',
             headers: {
@@ -38,7 +38,7 @@ export const ActualizarOpciones: React.FC<{ libro: LibroModelo, borrarLibro: any
     }
 
     async function incrementarCantidad() {
-        const apiUrl = `http://localhost:8080/api/admin/confidencial/incrementar/libro/?libroId=${props.libro?.id}`;
+        const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial/incrementar/libro/?libroId=${props.libro?.id}`;
         const peticion = {
             method: 'PUT',
             headers: {
@@ -58,7 +58,7 @@ export const ActualizarOpciones: React.FC<{ libro: LibroModelo, borrarLibro: any
     }
 
     async function disminuirCantidad() {
-        const apiUrl = `http://localhost:8080/api/admin/confidencial/disminuir/libro/?libroId=${props.libro?.id}`;
+        const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial/disminuir/libro/?libroId=${props.libro?.id}`;
         const peticion = {
             method: 'PUT',
             headers: {
