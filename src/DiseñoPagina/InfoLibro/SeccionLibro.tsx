@@ -44,7 +44,7 @@ export const SeccionLibro = () => {
   //busca y carga los libros en la pagina
   useEffect(() => {
     const buscarLibros = async () => {
-      const apiUrl: string = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes/${idLibro}`;
+      const apiUrl: string = `http://localhost:8080/api/libroes/${idLibro}`;
 
       const response = await fetch(apiUrl);
 
@@ -78,7 +78,7 @@ export const SeccionLibro = () => {
   //Busca y carga las reseñas
   useEffect(() => {
     const buscarResenas = async () => {
-      const apiUrl: string = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/resenas/search/findByLibroId?libroId=${idLibro}`;
+      const apiUrl: string = `http://localhost:8080/api/resenas/search/findByLibroId?libroId=${idLibro}`;
 
       const responseResena = await fetch(apiUrl);
 
@@ -128,7 +128,7 @@ export const SeccionLibro = () => {
   useEffect(() => {
     const fetchExisteResena = async () => {
       if (authState && authState.isAuthenticated) {
-        const urlApi = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/resenas/confidencial/existe/?libroId=${idLibro}`;
+        const urlApi = `http://localhost:8080/api/resenas/confidencial/existe/?libroId=${idLibro}`;
         const peticion = {
           method: "GET",
           headers: {
@@ -155,7 +155,7 @@ export const SeccionLibro = () => {
   useEffect(() => {
     const fetchPrestamosDisponibles = async () => {
       if (authState && authState.isAuthenticated) {
-        const url = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes/confidencial/prestamosusuario/cantidad`;
+        const url = `http://localhost:8080/api/libroes/confidencial/prestamosusuario/cantidad`;
         const peticion = {
           method: "GET",
           headers: {
@@ -187,7 +187,7 @@ export const SeccionLibro = () => {
   useEffect(() => {
     const buscarLibroPrestado = async () => {
       if (authState && authState.isAuthenticated) {
-        const url = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes/confidencial/validarprestamo/usuario/?libroId=${idLibro}`;
+        const url = `http://localhost:8080/api/libroes/confidencial/validarprestamo/usuario/?libroId=${idLibro}`;
         const peticion = {
           method: "GET",
           headers: {
@@ -237,7 +237,7 @@ export const SeccionLibro = () => {
 
   // Funcionalidad para pedir el prestamo de un libro
   async function prestamoLibroFuncionalidad() {
-    const url = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes/confidencial/prestamo/?libroId=${libro?.id}`;
+    const url = `http://localhost:8080/api/libroes/confidencial/prestamo/?libroId=${libro?.id}`;
     const peticion = {
       method: "PUT",
       headers: {
@@ -265,7 +265,7 @@ export const SeccionLibro = () => {
 
     const resenaRequestModel = new ResenaRequestModel(puntaje, libroId, resenaDescripcion);
 
-    const urlApi = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/resenas/confidencial`;
+    const urlApi = `http://localhost:8080/api/resenas/confidencial`;
 
     const peticion = {
       method: 'POST',

@@ -56,7 +56,7 @@ export const AnadirLibro = () => {
     }
 
     async function anadirLibroButton() {
-        const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/admin/confidencial/anadir/libro`;
+        const apiUrl = `http://localhost:8080/api/admin/confidencial/anadir/libro`;
         if (authState?.isAuthenticated && titulo !== '' && autor !== '' && descripcion !== '' &&
             categoria !== 'Categoria' && copias >= 0) {
             const libro: AnadirLibroRequest = new AnadirLibroRequest(titulo, autor, descripcion, copias, categoria);

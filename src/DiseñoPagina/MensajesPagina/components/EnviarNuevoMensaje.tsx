@@ -14,7 +14,7 @@ export const EnviarNuevoMensaje = () => {
     const [mostrarExito, setMostrarExito] = useState(false);
 
     async function enviarNuevaPregunta() {
-        const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/mensajeses/confidencial/enviar/mensaje`;
+        const apiUrl = `http://localhost:8080/api/mensajeses/confidencial/enviar/mensaje`;
 
         if (authState?.isAuthenticated && titulo !== '' && pregunta !== '') {
 

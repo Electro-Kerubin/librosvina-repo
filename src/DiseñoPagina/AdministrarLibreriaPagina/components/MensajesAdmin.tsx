@@ -30,7 +30,7 @@ export const MensajesAdmin = () => {
     useEffect(() => {
         const fetchRetornaMensajes = async () => {
             if (authState && authState.isAuthenticated) {
-                const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/mensajeses/search/findByCerrado/?cerrado=false&page=${paginaActual - 1}$size=${mensajesPorPagina}`;
+                const apiUrl = `http://localhost:8080/api/mensajeses/search/findByCerrado/?cerrado=false&page=${paginaActual - 1}$size=${mensajesPorPagina}`;
                 const peticion = {
                     method: 'GET',
                     headers: {
@@ -76,7 +76,7 @@ export const MensajesAdmin = () => {
     }
 
     async function enviarRespuesta(id: number, respuesta: string) {
-        const apiUrl = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/mensajeses/confidencial/admin/mensaje`;
+        const apiUrl = `http://localhost:8080/api/mensajeses/confidencial/admin/mensaje`;
         if (authState && authState?.isAuthenticated && id !== null && respuesta !== '') {
 
             const mensajesAdminRequestModel: MensajesAdminRequestModelo = new MensajesAdminRequestModelo(id, respuesta);

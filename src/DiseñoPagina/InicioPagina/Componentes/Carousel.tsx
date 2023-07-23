@@ -14,7 +14,7 @@ export const Carousel = () => {
     // Cargando libros de la api
     useEffect(() => {
         const fetchLibros = async () => {
-            const apiUrl: string = "https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes";
+            const apiUrl: string = "http://localhost:8080/api/libroes";
 
             const finalUrl: string = `${apiUrl}?page=0&size=9`;
 

@@ -21,7 +21,7 @@ export const ActualizarLibros = () => {
 
     useEffect(() => {
         const fetchLibros = async () => {
-            const apiUrl: string = `https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes?page=${paginaActual - 1}&size=${librosPorPagina}`;
+            const apiUrl: string = `http://localhost:8080/api/libroes?page=${paginaActual - 1}&size=${librosPorPagina}`;
 
             const response = await fetch(apiUrl);
 

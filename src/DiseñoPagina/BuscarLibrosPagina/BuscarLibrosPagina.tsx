@@ -21,7 +21,7 @@ export const BuscarLibrosPagina = () => {
     // buscar libros
     useEffect(() => {
         const fetchLibros = async () => {
-            const apiUrl: string = "https://app-biblioteca-libros-vinia-13e40b77ef4a.herokuapp.com/api/libroes";
+            const apiUrl: string = "http://localhost:8080/api/libroes";
 
             let finalUrl: string = '';
 
